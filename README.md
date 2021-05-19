@@ -32,6 +32,13 @@ This was firstly solved with Virtual Machines like VMWare and Hypervisors, thoug
 Docker Containers are lightweight alternatives to Virtual Machines – unlike VM's, we don't need to pre-allocate RAM, CPU, or other resources for them and we don't need to boot a new VM for each and every application since we're working with only one operating system.
 
 Developers don't need to burden themselves with shipping special versions of software for different environments and can focus on creating the core business logic behind the app.
+
+### Images
+
+An image is a blueprint that contains the instructions to build a container. It's an immutable snapshot of the file system and configuration of an application. Images can be easily shared between developers.
+
+### Containers
+A container is a executable package that contains everything needed to run an application. It will always run the same, regardless of infrastructure, in a sandboxed environment. It is a running instance of an image.
  
 ### Docker basic commands References:
 Refer these URLs for commands:
@@ -41,6 +48,17 @@ Refer these URLs for commands:
 ### Basic project setup  using Flask:
 ##### Reference 
 - https://stackabuse.com/dockerizing-python-applications/
+
+### Dockerfile
+To use a container, you'll need to give instructions to Docker via a file called `Dockerfile` in the root of your project.
+
+- **FROM** - Start the Dockerfile and pull from a base image
+- **COPY** - Copy files from local source to container target
+- **WORKDIR** - Set working directory for subsequent commands
+- **RUN** - Run commands
+- **EXPOSE** - Set a port
+- **ENTRYPOINT** - Set executable command
+
 
 
 
